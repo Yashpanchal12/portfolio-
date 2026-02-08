@@ -3,72 +3,165 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yash Panchal Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<title>Yash Panchal</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#0f172a;color:#e5e7eb;}
-
-header{
-  padding:80px 20px;
-  text-align:center;
-  background:linear-gradient(135deg,#2563eb,#9333ea);
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
 }
-header img{
-  width:160px;height:160px;border-radius:50%;
-  border:4px solid #fff;object-fit:cover;
-  box-shadow:0 15px 40px rgba(0,0,0,.4);
-}
-header h1{font-size:42px;margin-top:20px;}
-header p{font-size:18px;opacity:.9}
-
-section{max-width:1100px;margin:auto;padding:60px 20px;}
-
-.card{
-  background:#111827;
-  padding:30px;border-radius:16px;
-  margin-bottom:30px;
-  box-shadow:0 20px 50px rgba(0,0,0,.4);
-}
-
-h2{color:#60a5fa;margin-bottom:15px;}
-ul li{margin-bottom:10px;}
-
-.buttons a{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  margin:10px 10px 0 0;
-  padding:12px 22px;
-  border-radius:30px;
-  background:#2563eb;
-  color:#fff;text-decoration:none;
-  transition:.3s;
-}
-.buttons a:hover{
-  background:#1e40af;
-  transform:translateY(-3px);
-}
-
-.social a{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  color:#e5e7eb;
-  text-decoration:none;
-  font-size:18px;
-}
-.social a:hover{color:#e1306c;}
-
-footer{
+body{
   background:#020617;
+  color:#e5e7eb;
+}
+a{
+  color:#60a5fa;
+  text-decoration:none;
+}
+
+/* HEADER */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#020617;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #1e293b;
+  z-index:1000;
+}
+header h1{
+  font-size:20px;
+}
+nav a{
+  margin-left:20px;
+  font-size:15px;
+}
+
+/* THREE DOTS */
+.menu-dots{
+  font-size:28px;
+  cursor:pointer;
+  margin-left:15px;
+  user-select:none;
+}
+
+/* DOT MENU */
+.dot-menu{
+  position:absolute;
+  top:65px;
+  right:20px;
+  background:#020617;
+  border:1px solid #1e293b;
+  border-radius:14px;
+  min-width:160px;
+  display:flex;
+  flex-direction:column;
+
+  opacity:0;
+  transform: translateY(-10px) scale(0.95);
+  pointer-events:none;
+  transition: all 0.25s ease;
+  z-index:2000;
+}
+.dot-menu.show{
+  opacity:1;
+  transform: translateY(0) scale(1);
+  pointer-events:auto;
+}
+.dot-menu a{
+  padding:13px 16px;
+  border-bottom:1px solid #1e293b;
+}
+.dot-menu a:hover{
+  background:#1e293b;
+}
+.dot-menu a:last-child{
+  border-bottom:none;
+}
+
+/* SECTIONS */
+section{
+  padding:100px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+h2{
   text-align:center;
-  padding:30px;
-  color:#9ca3af;
-  font-size:14px;
+  font-size:32px;
+  margin-bottom:30px;
+}
+p{
+  line-height:1.8;
+  color:#cbd5f5;
+  margin-bottom:15px;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  text-align:center;
+}
+.hero h1{
+  font-size:40px;
+}
+.hero span{
+  color:#6366f1;
+}
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 35px;
+  background:#4f46e5;
+  color:white;
+  border-radius:30px;
+}
+
+/* GRID */
+.skills, .projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+.card{
+  background:#020617;
+  border:1px solid #1e293b;
+  padding:20px;
+  border-radius:15px;
+}
+
+/* FORM */
+form input, form textarea{
+  width:100%;
+  padding:15px;
+  margin-bottom:15px;
+  border-radius:10px;
+  border:1px solid #3b82f6;
+  background:#020617;
+  color:white;
+}
+form button{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:30px;
+  background:#4f46e5;
+  color:white;
+  font-size:16px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  border-top:1px solid #1e293b;
 }
 </style>
 </head>
@@ -76,81 +169,119 @@ footer{
 <body>
 
 <header>
-  <img src="profile.jpg" alt="Yash Panchal">
-  <h1>Yash Panchal Portfolio</h1>
-  <p>Data Analyst • Web Developer • Digital Marketer</p>
+  <h1>Yash Panchal</h1>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="menu-dots" onclick="toggleMenu()">⋮</div>
+
+  <div id="dotMenu" class="dot-menu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
 </header>
 
-<section>
+<section id="home" class="hero">
+  <h1>Hi, I'm <span>Yash Panchal</span></h1>
+  <p>Data Analytics | Digital Marketing | Web Developer</p>
+  <a href="#contact" class="btn">Contact Me</a>
+</section>
 
-<div class="card">
+<section id="about">
 <h2>About Me</h2>
 <p>
-Main ek motivated learner hoon jo Data Analytics, Web Development
-aur Digital Marketing ke field me grow kar raha hoon.
-Mera goal data se insights nikalna aur modern digital solutions banana hai.
+I am a passionate and self-driven professional with a strong interest in
+<strong>Data Analytics, Digital Marketing, and Web Development</strong>.
+I enjoy working with data, technology, and creative strategies to solve
+real-world problems.
+</p>
+<p>
+As a Data Analytics enthusiast, I focus on data cleaning, visualization,
+and extracting meaningful insights to support better decision-making.
+</p>
+<p>
+In Digital Marketing, I understand SEO, social media marketing, and
+data-driven growth strategies.
+</p>
+<p>
+I am also a Web Developer who builds clean, responsive, and professional
+websites using modern technologies.
+</p>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+  <div class="card">📊 Data Analytics</div>
+  <div class="card">📈 Data Visualization</div>
+  <div class="card">📢 Digital Marketing</div>
+  <div class="card">🔍 SEO</div>
+  <div class="card">💻 HTML, CSS, JavaScript</div>
+  <div class="card">🌐 Web Development</div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="projects">
+  <div class="card">
+    <h3>Portfolio Website</h3>
+    <p>Personal portfolio built with HTML & CSS.</p>
+  </div>
+  <div class="card">
+    <h3>Data Analytics Dashboard</h3>
+    <p>Analyzed data and created insights using visualization.</p>
+  </div>
+  <div class="card">
+    <h3>Digital Marketing Campaign</h3>
+    <p>SEO & social media growth strategy.</p>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Me</h2>
+<div class="card">
+<form action="mailto:yp099999@gmail.com" method="post" enctype="text/plain">
+  <input type="text" name="Name" placeholder="Your Name" required>
+  <input type="email" name="Email" placeholder="Your Email" required>
+  <textarea name="Message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send</button>
+</form>
+<p style="margin-top:15px;">
+📧 yp099999@gmail.com <br>
+📞 9302707801 <br>
+📸 <a href="https://www.instagram.com/yash.fxks" target="_blank">Instagram</a>
 </p>
 </div>
-
-<div class="card">
-<h2>Skills</h2>
-<ul>
-<li>✔ Data Analytics (Excel, SQL, Power BI – Basics)</li>
-<li>✔ Data Cleaning & Basic Visualization</li>
-<li>✔ HTML & CSS</li>
-<li>✔ GitHub Pages Hosting</li>
-<li>✔ Digital Marketing Basics</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>Data Analytics Projects</h2>
-<ul>
-<li><b>📊 Sales Performance Analysis</b><br>
-Excel ka use karke monthly sales data analyze kiya aur trends identify kiye.</li>
-
-<li><b>📈 Business Profit Analysis</b><br>
-Sample business data par profit-loss aur growth insights nikale.</li>
-
-<li><b>📉 Customer Data Analysis</b><br>
-Customer buying behaviour aur repeat customers ka analysis kiya.</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>Web Development Projects</h2>
-<ul>
-<li><b>💻 Personal Portfolio Website</b><br>
-HTML & CSS se responsive portfolio website design ki.</li>
-
-<li><b>📄 Business Landing Page</b><br>
-Simple business website with services & contact buttons.</li>
-
-<li><b>📱 Responsive Website Design</b><br>
-Mobile-friendly layouts using HTML & CSS.</li>
-</ul>
-</div>
-
-<div class="card buttons">
-<h2>Contact</h2>
-<a href="mailto:yp099999@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
-<a href="tel:9302707801"><i class="fa-solid fa-phone"></i> Call</a>
-<a href="https://wa.me/919302707801" target="_blank">
-<i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-</div>
-
-<div class="card social">
-<h2>Instagram</h2>
-<a href="https://www.instagram.com/yash.fxks?igsh=azVtZjBzZXk4bGx1" target="_blank">
-<i class="fa-brands fa-instagram"></i> @yash.fxks
-</a>
-</div>
-
 </section>
 
 <footer>
 © 2026 Yash Panchal | All Rights Reserved
 </footer>
+
+<script>
+const menu = document.getElementById("dotMenu");
+
+function toggleMenu(){
+  menu.classList.toggle("show");
+}
+
+document.addEventListener("click", function(e){
+  if(!e.target.closest(".menu-dots") && !e.target.closest(".dot-menu")){
+    menu.classList.remove("show");
+  }
+});
+</script>
 
 </body>
 </html>

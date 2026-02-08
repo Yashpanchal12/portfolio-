@@ -1,191 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Yash Panchal | Portfolio & Blog</title>
-  <meta name="description" content="Yash Panchal – Web Developer, Data Analyst & Blogger. Professional portfolio with blog, skills, contact & lead form.">
-  <meta name="keywords" content="Yash Panchal, Web Developer, Portfolio, Blog, Data Analytics">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- Google Analytics (replace ID later) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX');
-  </script>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yash Panchal</title>
 <style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
 body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#0f172a;
-  color:#fff;
+  background: radial-gradient(circle at top, #111827, #020617);
+  color:#fff;
 }
-header{
-  padding:40px 20px;
-  text-align:center;
-  background:linear-gradient(135deg,#6366f1,#22d3ee);
+/* NAVBAR */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  background:#020617;
 }
-header h1{margin:0;font-size:36px;}
-header p{font-size:18px;}
-
+nav h1{
+  color:#7c7cff;
+}
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:20px;
+}
+nav ul li a{
+  text-decoration:none;
+  color:#cbd5f5;
+}
+nav ul li a:hover{
+  color:#7c7cff;
+}
+/* HERO */
+.hero{
+  text-align:center;
+  padding:80px 20px;
+}
+.hero img{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  border:3px solid #7c7cff;
+  margin-bottom:20px;
+}
+.hero h2{
+  font-size:36px;
+}
+.hero h2 span{
+  color:#7c7cff;
+}
+.hero p{
+  margin:10px 0 25px;
+  color:#cbd5f5;
+}
+.btn{
+  background:linear-gradient(90deg,#7c7cff,#4facfe);
+  padding:12px 30px;
+  border-radius:25px;
+  text-decoration:none;
+  color:white;
+  font-weight:600;
+}
+/* SECTIONS */
 section{
-  max-width:1100px;
-  margin:40px auto;
-  padding:20px;
+  padding:60px 20px;
+  max-width:900px;
+  margin:auto;
 }
-
-.card{
-  background:#111827;
-  padding:25px;
-  border-radius:15px;
-  margin-bottom:30px;
-  box-shadow:0 10px 25px rgba(0,0,0,.4);
+section h2{
+  text-align:center;
+  color:#7c7cff;
+  margin-bottom:30px;
 }
-
-h2{
-  color:#22d3ee;
-  margin-bottom:20px;
+/* ABOUT */
+.about{
+  background:#020617;
+  border-radius:15px;
+  padding:30px;
+  color:#cbd5f5;
 }
-
-.skills .bar{
-  background:#1f2933;
-  border-radius:20px;
-  margin-bottom:15px;
+/* SKILLS */
+.skill{
+  margin-bottom:20px;
 }
-.skills .fill{
-  height:18px;
-  border-radius:20px;
-  background:linear-gradient(90deg,#22d3ee,#6366f1);
+.skill span{
+  font-size:15px;
 }
-
-.blog a{
-  color:#38bdf8;
-  text-decoration:none;
-  font-weight:bold;
+.progress{
+  background:#1e293b;
+  height:10px;
+  border-radius:10px;
+  overflow:hidden;
+  margin-top:6px;
 }
-
-input, textarea, button{
-  width:100%;
-  padding:12px;
-  border:none;
-  border-radius:8px;
-  margin-bottom:10px;
+.progress-bar{
+  height:100%;
+  width:0;
+  background:linear-gradient(90deg,#7c7cff,#4facfe);
+  animation: load 2s forwards;
 }
-button{
-  background:#22d3ee;
-  color:#000;
-  font-weight:bold;
-  cursor:pointer;
+@keyframes load{
+  to{ width:var(--level); }
 }
-
-.social a{
-  margin:0 10px;
-  font-size:24px;
-  color:#fff;
+/* PROJECTS */
+.project{
+  background:#020617;
+  border-radius:15px;
+  padding:20px;
+  margin-bottom:20px;
 }
-
+.project img{
+  width:100%;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+/* CONTACT */
+.contact{
+  text-align:center;
+}
+.contact a{
+  display:block;
+  color:#cbd5f5;
+  margin:8px 0;
+  text-decoration:none;
+}
 footer{
-  text-align:center;
-  padding:20px;
-  background:#020617;
-  color:#94a3b8;
-}
-
-/* WhatsApp Floating */
-.whatsapp{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  background:#25D366;
-  color:#fff;
-  padding:15px;
-  border-radius:50%;
-  font-size:28px;
-  z-index:999;
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  color:#94a3b8;
 }
 </style>
 </head>
-
 <body>
-
-<header>
-  <h1>Yash Panchal</h1>
-  <p>Web Developer • Data Analyst • Blogger</p>
-
-  <div class="social">
-    <a href="https://www.instagram.com/yash.fxks" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://wa.me/919302707801" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="mailto:yourmail@gmail.com"><i class="fas fa-envelope"></i></a>
-  </div>
-</header>
-
+<!-- NAV -->
+<nav>
+  <h1>Yash Panchal</h1>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<!-- HERO -->
+<div class="hero">
+  <img src="profile.jpg" alt="Yash Panchal">
+  <h2>Hi, I'm <span>Yash Panchal</span></h2>
+  <p>Data Analytics | Digital Marketing | Web Developer</p>
+  <a href="#contact" class="btn">Contact Me</a>
+</div>
 <!-- ABOUT -->
-<section class="card">
-  <h2>About Me</h2>
-  <p>
-    I am <b>Yash Panchal</b>, a passionate Web Developer and Data Analyst.
-    I build professional websites, dashboards and SEO-friendly blogs.
-    My goal is to help businesses grow using modern technology and analytics.
-  </p>
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about">
+    I am a passionate Data Analytics professional skilled in transforming raw data into meaningful insights using Power BI and Excel.
+    Along with analytics, I work in Digital Marketing focusing on SEO and performance growth.
+    I am also a Web Developer creating clean, modern, and responsive websites.
+  </div>
 </section>
-
 <!-- SKILLS -->
-<section class="card skills">
-  <h2>Skills</h2>
-
-  <p>Web Development – 90%</p>
-  <div class="bar"><div class="fill" style="width:90%"></div></div>
-
-  <p>Data Analytics (Power BI, Excel) – 85%</p>
-  <div class="bar"><div class="fill" style="width:85%"></div></div>
-
-  <p>SEO & Blogging – 80%</p>
-  <div class="bar"><div class="fill" style="width:80%"></div></div>
-
-  <p>GitHub & Deployment – 75%</p>
-  <div class="bar"><div class="fill" style="width:75%"></div></div>
+<section id="skills">
+  <h2>My Skills</h2>
+  <div class="skill">
+    <span>Power BI</span>
+    <div class="progress"><div class="progress-bar" style="--level:85%"></div></div>
+  </div>
+  <div class="skill">
+    <span>Excel</span>
+    <div class="progress"><div class="progress-bar" style="--level:80%"></div></div>
+  </div>
+  <div class="skill">
+    <span>Data Analytics</span>
+    <div class="progress"><div class="progress-bar" style="--level:75%"></div></div>
+  </div>
+  <div class="skill">
+    <span>GitHub</span>
+    <div class="progress"><div class="progress-bar" style="--level:70%"></div></div>
+  </div>
+  <div class="skill">
+    <span>Web Development</span>
+    <div class="progress"><div class="progress-bar" style="--level:65%"></div></div>
+  </div>
 </section>
-
-<!-- BLOG -->
-<section class="card blog">
-  <h2>Latest Blog</h2>
-  <p>
-    👉 <a href="blog1.html">Top 7 Career Options After 12th Science</a>
-  </p>
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project">
+    <img src="powerbi-dashboard.jpg" alt="Power BI Dashboard">
+    <h3>Power BI Sales Dashboard</h3>
+    <p>Interactive dashboard analyzing sales, profit, and KPIs.</p>
+  </div>
+  <div class="project">
+    <h3>Excel Sales Tracker</h3>
+    <p>Excel-based project for tracking sales and expenses.</p>
+  </div>
 </section>
-
-<!-- INSTAGRAM EMBED -->
-<section class="card">
-  <h2>Instagram Updates</h2>
-  <iframe src="https://www.instagram.com/yash.fxks/embed"
-    width="100%" height="450" style="border:none;border-radius:12px;"></iframe>
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div class="contact">
+    <a href="mailto:yp099999@gmail.com">📧 yp099999@gmail.com</a>
+    <a href="tel:9302707801">📞 9302707801</a>
+    <a href="https://www.instagram.com/yash.fxks" target="_blank">📸 Instagram</a>
+  </div>
 </section>
-
-<!-- CONTACT / LEAD FORM -->
-<section class="card">
-  <h2>Contact / Lead Form</h2>
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message"></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
 <footer>
-  © 2026 Yash Panchal | Portfolio & Blog
+  © 2026 Yash Panchal | All Rights Reserved
 </footer>
-
-<!-- WhatsApp Floating -->
-<a class="whatsapp" href="https://wa.me/919302707801?text=Hi%20Yash,%20I%20found%20your%20portfolio" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
 </body>
 </html>

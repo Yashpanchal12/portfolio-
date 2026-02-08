@@ -1,98 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Yash Panchal | Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Yash Panchal | Portfolio & Blog</title>
+  <meta name="description" content="Yash Panchal – Web Developer, Data Analyst & Blogger. Professional portfolio with blog, skills, contact & lead form.">
+  <meta name="keywords" content="Yash Panchal, Web Developer, Portfolio, Blog, Data Analytics">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO -->
-<meta name="description" content="Yash Panchal - Web Developer, Data Analyst & Blogger">
-<meta name="keywords" content="Web Developer, Data Analyst, Blogger, Portfolio">
-<meta name="author" content="Yash Panchal">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5K97SGLHNP"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-5K97SGLHNP');
-</script>
+  <!-- Google Analytics (replace ID later) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
 
 <style>
-body{margin:0;font-family:Arial;background:#0f172a;color:#fff}
-header{text-align:center;padding:40px}
-img{width:150px;border-radius:50%}
-section{padding:30px}
-.skill-bar{background:#334155;border-radius:20px;overflow:hidden;margin-bottom:10px}
-.skill-fill{background:#38bdf8;padding:6px}
-a{color:#38bdf8;text-decoration:none}
-form input,form textarea,form button{
-width:100%;padding:10px;margin:6px 0;border:none;border-radius:6px
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#0f172a;
+  color:#fff;
 }
-form button{background:#38bdf8;color:#000;font-weight:bold}
-footer{text-align:center;padding:20px;background:#020617}
+header{
+  padding:40px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#6366f1,#22d3ee);
+}
+header h1{margin:0;font-size:36px;}
+header p{font-size:18px;}
+
+section{
+  max-width:1100px;
+  margin:40px auto;
+  padding:20px;
+}
+
+.card{
+  background:#111827;
+  padding:25px;
+  border-radius:15px;
+  margin-bottom:30px;
+  box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+h2{
+  color:#22d3ee;
+  margin-bottom:20px;
+}
+
+.skills .bar{
+  background:#1f2933;
+  border-radius:20px;
+  margin-bottom:15px;
+}
+.skills .fill{
+  height:18px;
+  border-radius:20px;
+  background:linear-gradient(90deg,#22d3ee,#6366f1);
+}
+
+.blog a{
+  color:#38bdf8;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+input, textarea, button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  margin-bottom:10px;
+}
+button{
+  background:#22d3ee;
+  color:#000;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.social a{
+  margin:0 10px;
+  font-size:24px;
+  color:#fff;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:#020617;
+  color:#94a3b8;
+}
+
+/* WhatsApp Floating */
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:#25D366;
+  color:#fff;
+  padding:15px;
+  border-radius:50%;
+  font-size:28px;
+  z-index:999;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<img src="profile.jpg" alt="Yash Panchal">
-<h1>Yash Panchal</h1>
-<h3>Web Developer • Data Analyst • Blogger</h3>
-<p>I build websites, analyze data & write blogs to grow online businesses.</p>
+  <h1>Yash Panchal</h1>
+  <p>Web Developer • Data Analyst • Blogger</p>
 
-<p>
-<a href="blog1.html">📖 Blog</a> |
-<a href="https://www.instagram.com/yash.fxks?igsh=MW4zamJyZDU0eXcyZA==" target="_blank">📸 Instagram</a>
-</p>
+  <div class="social">
+    <a href="https://www.instagram.com/yash.fxks" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/919302707801" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="mailto:yourmail@gmail.com"><i class="fas fa-envelope"></i></a>
+  </div>
 </header>
 
-<section>
-<h2>About Me</h2>
-<p>
-I am a passionate Web Developer and Data Analyst who loves creating modern websites,
-analyzing data with tools like Power BI, and sharing knowledge through blogging.
-My goal is to help businesses grow digitally using technology and data.
-</p>
+<!-- ABOUT -->
+<section class="card">
+  <h2>About Me</h2>
+  <p>
+    I am <b>Yash Panchal</b>, a passionate Web Developer and Data Analyst.
+    I build professional websites, dashboards and SEO-friendly blogs.
+    My goal is to help businesses grow using modern technology and analytics.
+  </p>
 </section>
 
-<section>
-<h2>Skills</h2>
+<!-- SKILLS -->
+<section class="card skills">
+  <h2>Skills</h2>
 
-<p>HTML / CSS</p>
-<div class="skill-bar"><div class="skill-fill" style="width:90%">90%</div></div>
+  <p>Web Development – 90%</p>
+  <div class="bar"><div class="fill" style="width:90%"></div></div>
 
-<p>JavaScript</p>
-<div class="skill-bar"><div class="skill-fill" style="width:75%">75%</div></div>
+  <p>Data Analytics (Power BI, Excel) – 85%</p>
+  <div class="bar"><div class="fill" style="width:85%"></div></div>
 
-<p>Power BI</p>
-<div class="skill-bar"><div class="skill-fill" style="width:80%">80%</div></div>
+  <p>SEO & Blogging – 80%</p>
+  <div class="bar"><div class="fill" style="width:80%"></div></div>
 
-<p>SEO & Blogging</p>
-<div class="skill-bar"><div class="skill-fill" style="width:85%">85%</div></div>
+  <p>GitHub & Deployment – 75%</p>
+  <div class="bar"><div class="fill" style="width:75%"></div></div>
 </section>
 
-<section>
-<h2>Projects</h2>
-<img src="powerbi-dashboard.jpg" width="100%" style="border-radius:10px">
-<p>Power BI Sales Dashboard</p>
+<!-- BLOG -->
+<section class="card blog">
+  <h2>Latest Blog</h2>
+  <p>
+    👉 <a href="blog1.html">Top 7 Career Options After 12th Science</a>
+  </p>
 </section>
 
-<section>
-<h2>Contact / Lead Form</h2>
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<textarea placeholder="Your Message"></textarea>
-<button type="submit">Send</button>
-</form>
+<!-- INSTAGRAM EMBED -->
+<section class="card">
+  <h2>Instagram Updates</h2>
+  <iframe src="https://www.instagram.com/yash.fxks/embed"
+    width="100%" height="450" style="border:none;border-radius:12px;"></iframe>
+</section>
+
+<!-- CONTACT / LEAD FORM -->
+<section class="card">
+  <h2>Contact / Lead Form</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 </section>
 
 <footer>
-<p>© 2026 Yash Panchal | All Rights Reserved</p>
+  © 2026 Yash Panchal | Portfolio & Blog
 </footer>
+
+<!-- WhatsApp Floating -->
+<a class="whatsapp" href="https://wa.me/919302707801?text=Hi%20Yash,%20I%20found%20your%20portfolio" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>

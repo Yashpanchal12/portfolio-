@@ -2,119 +2,97 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Yash Panchal | Data Analyst Portfolio & Blog</title>
+<title>Yash Panchal | Portfolio</title>
+
+<!-- SEO -->
+<meta name="description" content="Yash Panchal - Web Developer, Data Analyst & Blogger">
+<meta name="keywords" content="Web Developer, Data Analyst, Blogger, Portfolio">
+<meta name="author" content="Yash Panchal">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ✅ SEO -->
-<meta name="description" content="Yash Panchal Portfolio – Data Analyst, Excel, Power BI Projects and Blogging">
-<meta name="keywords" content="Data Analyst, Power BI, Excel, Portfolio, Blog">
-<meta name="author" content="Yash Panchal">
-
-<!-- ✅ Google Analytics (GA4) -->
-<!-- STEP: ID ko apni GA ID se replace karna -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5K97SGLHNP"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-XXXXXXXXXX');
+gtag('config', 'G-5K97SGLHNP');
 </script>
 
-<!-- Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <style>
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-  color:white;
+body{margin:0;font-family:Arial;background:#0f172a;color:#fff}
+header{text-align:center;padding:40px}
+img{width:150px;border-radius:50%}
+section{padding:30px}
+.skill-bar{background:#334155;border-radius:20px;overflow:hidden;margin-bottom:10px}
+.skill-fill{background:#38bdf8;padding:6px}
+a{color:#38bdf8;text-decoration:none}
+form input,form textarea,form button{
+width:100%;padding:10px;margin:6px 0;border:none;border-radius:6px
 }
-header{text-align:center;padding:30px;}
-header img{
-  width:130px;height:130px;border-radius:50%;
-  border:4px solid #00ffcc;
-}
-nav{
-  display:flex;justify-content:center;gap:25px;
-  background:#000;padding:15px;
-}
-nav a{color:#00ffcc;text-decoration:none;font-weight:bold;}
-section{
-  max-width:1100px;margin:30px auto;padding:25px;
-  background:#111;border-radius:15px;
-}
-.btn{
-  background:#00ffcc;color:black;
-  padding:10px 20px;border-radius:25px;
-  text-decoration:none;font-weight:bold;
-  display:inline-block;margin-top:10px;
-}
-input,textarea{
-  width:100%;padding:12px;margin:10px 0;
-  border-radius:8px;border:none;
-}
-footer{text-align:center;padding:20px;opacity:0.7;}
-.whatsapp{
-  position:fixed;right:20px;bottom:20px;
-  background:#25D366;color:white;
-  font-size:30px;padding:15px;border-radius:50%;
-}
+form button{background:#38bdf8;color:#000;font-weight:bold}
+footer{text-align:center;padding:20px;background:#020617}
 </style>
 </head>
 
 <body>
 
 <header>
-  <img src="profile.jpg">
-  <h1>Yash Panchal</h1>
-  <p>Data Analyst | Excel | Power BI | Blogging</p>
+<img src="profile.jpg" alt="Yash Panchal">
+<h1>Yash Panchal</h1>
+<h3>Web Developer • Data Analyst • Blogger</h3>
+<p>I build websites, analyze data & write blogs to grow online businesses.</p>
+
+<p>
+<a href="blog1.html">📖 Blog</a> |
+<a href="https://www.instagram.com/yash.fxks?igsh=MW4zamJyZDU0eXcyZA==" target="_blank">📸 Instagram</a>
+</p>
 </header>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="blog1.html">Blog</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<section id="about">
+<section>
 <h2>About Me</h2>
-<p>I am building my career in Data Analytics with Excel, Power BI and blogging.</p>
-</section>
-
-<section id="projects">
-<h2>Power BI Project</h2>
-<img src="powerbi-dashboard.jpg" style="width:100%;border-radius:10px;">
-<p>Sales Dashboard with insights.</p>
-<a class="btn" href="powerbi-dashboard.jpg" download>Download Project</a>
+<p>
+I am a passionate Web Developer and Data Analyst who loves creating modern websites,
+analyzing data with tools like Power BI, and sharing knowledge through blogging.
+My goal is to help businesses grow digitally using technology and data.
+</p>
 </section>
 
 <section>
-<h2>Latest Blog</h2>
-<p>Top Career Options After 12th Science</p>
-<a class="btn" href="blog1.html">Read Blog</a>
+<h2>Skills</h2>
+
+<p>HTML / CSS</p>
+<div class="skill-bar"><div class="skill-fill" style="width:90%">90%</div></div>
+
+<p>JavaScript</p>
+<div class="skill-bar"><div class="skill-fill" style="width:75%">75%</div></div>
+
+<p>Power BI</p>
+<div class="skill-bar"><div class="skill-fill" style="width:80%">80%</div></div>
+
+<p>SEO & Blogging</p>
+<div class="skill-bar"><div class="skill-fill" style="width:85%">85%</div></div>
 </section>
 
-<!-- ✅ LEAD FORM -->
-<section id="contact">
+<section>
+<h2>Projects</h2>
+<img src="powerbi-dashboard.jpg" width="100%" style="border-radius:10px">
+<p>Power BI Sales Dashboard</p>
+</section>
+
+<section>
 <h2>Contact / Lead Form</h2>
-
-<form action="https://formsubmit.co/your@email.com" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message"></textarea>
-  <button class="btn" type="submit">Send</button>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message"></textarea>
+<button type="submit">Send</button>
 </form>
-
-<p>📩 Email: yashpanchal@email.com</p>
 </section>
 
-<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-<footer>© 2026 Yash Panchal</footer>
+<footer>
+<p>© 2026 Yash Panchal | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>

@@ -1,84 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Yash Panchal | Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yash Panchal | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0f172a;color:#e5e7eb;}
+
+header{
+  padding:80px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#2563eb,#9333ea);
+  animation:fadeDown 1s ease;
+}
+header img{
+  width:160px;height:160px;border-radius:50%;
+  border:4px solid #fff;object-fit:cover;
+  box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
+header h1{font-size:42px;margin-top:20px;}
+header p{font-size:18px;opacity:.9}
+
+section{max-width:1100px;margin:auto;padding:60px 20px;}
+
+.card{
+  background:#111827;
+  padding:30px;border-radius:16px;
+  margin-bottom:30px;
+  box-shadow:0 20px 50px rgba(0,0,0,.4);
+  animation:fadeUp 1s ease;
+}
+
+h2{color:#60a5fa;margin-bottom:15px;}
+
+ul li{margin-bottom:8px;}
+
+.buttons a{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin:10px 10px 0 0;
+  padding:12px 22px;
+  border-radius:30px;
+  background:#2563eb;
+  color:#fff;text-decoration:none;
+  transition:.3s;
+}
+.buttons a:hover{
+  background:#1e40af;
+  transform:translateY(-3px);
+}
+
+.social a{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-top:10px;
+  color:#e5e7eb;
+  text-decoration:none;
+  font-size:18px;
+  transition:.3s;
+}
+.social a:hover{
+  color:#e1306c;
+  transform:translateY(-2px);
+}
+
+footer{
+  background:#020617;
+  text-align:center;
+  padding:30px;
+  color:#9ca3af;
+  font-size:14px;
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px);}
+  to{opacity:1;transform:translateY(0);}
+}
+@keyframes fadeDown{
+  from{opacity:0;transform:translateY(-40px);}
+  to{opacity:1;transform:translateY(0);}
+}
+</style>
 </head>
-<body class="bg-gray-100 text-gray-800">
 
-  <!-- HERO SECTION -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4">
-    <h1 class="text-5xl font-bold mb-4">Hi, I'm Yash Panchal</h1>
-    <p class="text-xl mb-6">Digital Marketer | Data Analytics Learner | Business Mindset</p>
-    <a href="#projects" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
-      View My Work
-    </a>
-  </section>
+<body>
 
-  <!-- PROFILE PHOTO -->
-  <section class="py-12 text-center bg-white">
-    <img src="https://via.placeholder.com/150" alt="Profile Photo" class="mx-auto rounded-full mb-4 shadow-lg">
-    <p class="text-gray-600">Profile Photo (You can change this later)</p>
-  </section>
+<header>
+  <img src="profile.jpg" alt="Yash Panchal">
+  <h1>Yash Panchal</h1>
+  <p>Web Developer • Digital Marketer • Business Enthusiast</p>
+</header>
 
-  <!-- ABOUT SECTION -->
-  <section class="py-16 px-6 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-4 text-center">About Me</h2>
-    <p class="text-gray-600 text-center">
-      I am learning digital marketing and data analytics and want to build my own business.
-      I create simple, effective solutions and love learning new skills.
-    </p>
-  </section>
+<section>
 
-  <!-- PROJECTS SECTION -->
-  <section id="projects" class="py-16 px-6 bg-white">
-    <h2 class="text-3xl font-bold mb-10 text-center">Projects</h2>
+<div class="card">
+<h2>About Me</h2>
+<p>
+Main ek passionate learner hoon jo modern websites, digital marketing
+aur online business solutions par kaam kar raha hoon.
+Mera focus clean, fast aur premium design banana hai.
+</p>
+</div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+<div class="card">
+<h2>Skills</h2>
+<ul>
+<li>✔ HTML & CSS</li>
+<li>✔ GitHub Pages Hosting</li>
+<li>✔ Portfolio Website Design</li>
+<li>✔ Digital Marketing Basics</li>
+<li>✔ Online Business Growth</li>
+</ul>
+</div>
 
-      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">Digital Marketing Campaign</h3>
-        <p class="text-gray-600 mb-4">Social media & lead generation strategy.</p>
-        <a href="#" class="text-blue-500 hover:underline">View Project</a>
-      </div>
+<div class="card">
+<h2>Services</h2>
+<ul>
+<li>💻 Website & Portfolio Design</li>
+<li>📈 Digital Marketing Setup</li>
+<li>🌐 Online Presence Creation</li>
+<li>🚀 Business Branding Support</li>
+</ul>
+</div>
 
-      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">Data Analytics Practice</h3>
-        <p class="text-gray-600 mb-4">Excel & basic data analysis work.</p>
-        <a href="#" class="text-blue-500 hover:underline">View Project</a>
-      </div>
+<div class="card buttons">
+<h2>Contact</h2>
+<a href="mailto:yp099999@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+<a href="tel:9302707801"><i class="fa-solid fa-phone"></i> Call</a>
+<a href="https://wa.me/919302707801" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+</div>
 
-      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">Business Research</h3>
-        <p class="text-gray-600 mb-4">Market & customer research project.</p>
-        <a href="#" class="text-blue-500 hover:underline">View Project</a>
-      </div>
+<div class="card social">
+<h2>Instagram</h2>
+<a href="https://www.instagram.com/yash.fxks?igsh=azVtZjBzZXk4bGx1" target="_blank">
+<i class="fa-brands fa-instagram"></i> @yash.fxks
+</a>
+</div>
 
-    </div>
-  </section>
+</section>
 
-  <!-- CONTACT SECTION -->
-  <section class="py-16 px-6 text-center">
-    <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
-    <p class="text-gray-600 mb-2">Email: yp099999@gmail.com</p>
-    <a href="#" class="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Download Resume</a>
-    <p class="text-gray-600">Phone: +91 9302707801</p>
-  </section>
-
-  
-  <!-- WHATSAPP BUTTON -->
-  <a href="https://wa.me/919302707801" target="_blank"
-     class="fixed bottom-6 right-6 bg-green-500 text-white px-5 py-3 rounded-full shadow-lg hover:bg-green-600 transition">
-    WhatsApp Me
-  </a>
-
-
-  <!-- FOOTER -->
-  <footer class="bg-gray-900 text-white text-center py-4">
-    © 2026 Yash Panchal. All rights reserved.
-  </footer>
+<footer>
+© 2026 Yash Panchal | Premium Portfolio
+</footer>
 
 </body>
 </html>

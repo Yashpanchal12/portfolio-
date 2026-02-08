@@ -1,202 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+
+<!-- ===== SEO (OPTION 5) ===== -->
+<title>Yash Panchal | Data Analyst | Digital Marketer | Web Developer</title>
+<meta name="description" content="Yash Panchal portfolio – Data Analytics, Power BI dashboards, Digital Marketing & Web Development projects.">
+<meta name="keywords" content="Yash Panchal, Data Analytics, Power BI, Digital Marketing, Web Developer, Portfolio">
+<meta name="author" content="Yash Panchal">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yash Panchal</title>
+
+<!-- Google Index -->
+<meta name="robots" content="index, follow">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family:'Poppins',sans-serif;
 }
+
 body{
-  background:#0b0f1a;
-  color:#fff;
-  scroll-behavior:smooth;
+  background:linear-gradient(135deg,#0f172a,#020617);
+  color:white;
 }
 
 /* NAVBAR */
-header{
+nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 25px;
+  padding:20px 10%;
+  background:rgba(0,0,0,0.3);
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
-header h1{
-  font-size:22px;
+
+nav h1{
+  color:#6366f1;
 }
-nav a{
-  margin:0 10px;
-  color:#6c63ff;
+
+nav ul{
+  display:flex;
+  gap:25px;
+  list-style:none;
+}
+
+nav ul li a{
+  color:white;
   text-decoration:none;
   font-weight:500;
 }
-.menu{
-  font-size:22px;
-  cursor:pointer;
+
+nav ul li a:hover{
+  color:#6366f1;
 }
 
 /* HERO */
 .hero{
   text-align:center;
-  padding:60px 20px;
+  padding:80px 10%;
 }
-.profile-img{
+
+.hero img{
   width:160px;
   height:160px;
   border-radius:50%;
-  border:4px solid #6c63ff;
-  object-fit:cover;
-  animation:float 3s ease-in-out infinite;
-}
-@keyframes float{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-10px)}
-}
-.hero h2{
-  font-size:36px;
-  margin:20px 0;
-}
-.hero span{
-  color:#6c63ff;
-}
-.hero p{
-  opacity:.8;
-}
-.btn{
-  display:inline-block;
-  margin-top:25px;
-  padding:14px 30px;
-  background:#6c63ff;
-  color:#fff;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:600;
+  border:4px solid #6366f1;
+  margin-bottom:20px;
 }
 
-/* SECTIONS */
+.hero h2{
+  font-size:42px;
+}
+
+.hero span{
+  color:#6366f1;
+}
+
+.hero p{
+  margin-top:10px;
+  opacity:0.8;
+}
+
+.btn{
+  margin-top:25px;
+  padding:12px 30px;
+  background:#6366f1;
+  color:white;
+  border:none;
+  border-radius:25px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.btn:hover{
+  background:#4f46e5;
+}
+
+/* SECTION */
 section{
-  padding:60px 20px;
-  max-width:900px;
-  margin:auto;
+  padding:80px 10%;
 }
-section h3{
+
+section h2{
   text-align:center;
-  margin-bottom:20px;
-  font-size:28px;
-  color:#6c63ff;
+  color:#6366f1;
+  margin-bottom:40px;
+  font-size:32px;
 }
-.card{
-  background:#12172a;
-  padding:20px;
-  border-radius:15px;
-  margin:15px 0;
+
+/* ABOUT */
+.about{
+  max-width:800px;
+  margin:auto;
+  text-align:center;
+  line-height:1.7;
+  opacity:0.9;
 }
 
 /* SKILLS */
-.skills span{
-  display:inline-block;
-  background:#6c63ff;
-  padding:8px 15px;
-  border-radius:20px;
-  margin:5px;
-  font-size:14px;
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:25px;
+}
+
+.skill{
+  background:#020617;
+  padding:25px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 0 20px rgba(99,102,241,0.2);
+}
+
+.skill i{
+  font-size:40px;
+  color:#6366f1;
+}
+
+.skill h3{
+  margin-top:10px;
+}
+
+/* PROJECTS */
+.projects .card{
+  background:#020617;
+  padding:25px;
+  border-radius:15px;
+  margin-bottom:20px;
+}
+
+/* MODAL (OPTION 1) */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.8);
+  justify-content:center;
+  align-items:center;
+}
+
+.modal-content{
+  background:#020617;
+  padding:30px;
+  border-radius:15px;
+  width:90%;
+  max-width:600px;
+}
+
+.close{
+  float:right;
+  cursor:pointer;
+  color:red;
+}
+
+/* CERTIFICATES (OPTION 2) */
+.certificates{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.certificate{
+  background:#020617;
+  padding:20px;
+  border-radius:15px;
+  text-align:center;
 }
 
 /* CONTACT */
-.contact p{
+.contact{
   text-align:center;
-  margin:10px 0;
-  font-size:16px;
 }
+
+.contact p{
+  margin:10px 0;
+}
+
+/* FOOTER */
 footer{
   text-align:center;
   padding:20px;
-  opacity:.6;
+  opacity:0.6;
 }
 </style>
 </head>
 
 <body>
 
-<header>
+<nav>
   <h1>Yash Panchal</h1>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <div class="menu">⋮</div>
-</header>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certificates">Certificates</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-<!-- HOME -->
-<section class="hero" id="home">
-  <img src="profile.jpg" alt="Yash Panchal" class="profile-img">
+<!-- HERO -->
+<div class="hero">
+  <img src="profile.jpg" alt="Yash Panchal">
   <h2>Hi, I'm <span>Yash Panchal</span></h2>
   <p>Data Analytics | Digital Marketing | Web Developer</p>
-  <a href="#contact" class="btn">Contact Me</a>
-</section>
+  <button class="btn" onclick="openModal()">View Power BI Dashboard</button>
+</div>
 
 <!-- ABOUT -->
 <section id="about">
-  <h3>About Me</h3>
-  <div class="card">
-    <p>
-      I am a passionate Data Analytics professional with a strong interest in transforming raw data into meaningful insights.
-      I enjoy working with data, dashboards, and reports that help businesses take better decisions.
-    </p><br>
-    <p>
-      Along with analytics, I also work in Digital Marketing where I focus on SEO, content strategy,
-      and performance-driven campaigns to grow online presence.
-    </p><br>
-    <p>
-      I am also a Web Developer who builds clean, modern, and responsive websites using HTML, CSS, and JavaScript.
-      My goal is to combine data, design, and marketing into impactful digital solutions.
-    </p>
-  </div>
+<h2>About Me</h2>
+<p class="about">
+I am a passionate Data Analytics professional skilled in transforming raw data into meaningful insights using Power BI, Excel, and dashboards.
+Along with analytics, I work in Digital Marketing focusing on SEO, content strategy, and performance growth.
+I am also a Web Developer creating modern, responsive, and professional websites using HTML, CSS, and JavaScript.
+</p>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
-  <h3>Skills</h3>
-  <div class="card skills">
-    <span>Data Analytics</span>
-    <span>Power BI</span>
-    <span>Excel</span>
-    <span>SEO</span>
-    <span>Digital Marketing</span>
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>JavaScript</span>
-  </div>
+<h2>Skills</h2>
+<div class="skills">
+  <div class="skill"><i class="fa-solid fa-chart-simple"></i><h3>Power BI</h3></div>
+  <div class="skill"><i class="fa-solid fa-file-excel"></i><h3>Excel</h3></div>
+  <div class="skill"><i class="fa-brands fa-github"></i><h3>GitHub</h3></div>
+  <div class="skill"><i class="fa-solid fa-file-word"></i><h3>MS Word</h3></div>
+  <div class="skill"><i class="fa-solid fa-code"></i><h3>Web Development</h3></div>
+</div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
-  <h3>Projects</h3>
-  <div class="card">
-    <p>📊 Power BI Sales Dashboard (Demo)</p>
-    <p>📈 Data Analysis Case Study (Sample)</p>
-    <p>🌐 Personal Portfolio Website</p>
-  </div>
+<section id="projects" class="projects">
+<h2>Projects</h2>
+<div class="card">📊 Power BI Sales Dashboard (Demo)</div>
+<div class="card">📈 Data Analytics Case Study</div>
+<div class="card">🌐 Personal Portfolio Website</div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certificates">
+<h2>Certificates</h2>
+<div class="certificates">
+  <div class="certificate">📜 Data Analytics Certification</div>
+  <div class="certificate">📜 Power BI Certification</div>
+  <div class="certificate">📜 Digital Marketing Certification</div>
+</div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
-  <h3>Contact Me</h3>
-  <p>📧 yp099999@gmail.com</p>
-  <p>📞 9302707801</p>
-  <p>📷 <a href="https://www.instagram.com/yash.fxks" style="color:#6c63ff">Instagram</a></p>
+<h2>Contact Me</h2>
+<p>📧 yp099999@gmail.com</p>
+<p>📞 9302707801</p>
+<p>📸 <a href="https://www.instagram.com/yash.fxks" target="_blank" style="color:#6366f1;">Instagram</a></p>
 </section>
 
 <footer>
-  © 2026 Yash Panchal | All Rights Reserved
+© 2026 Yash Panchal | All Rights Reserved
 </footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">✖</span>
+    <h3>Power BI Dashboard</h3>
+    <p>👉 Yahan tum Power BI dashboard image ya embed link add kar sakte ho.</p>
+  </div>
+</div>
+
+<script>
+function openModal(){
+  document.getElementById("modal").style.display="flex";
+}
+function closeModal(){
+  document.getElementById("modal").style.display="none";
+}
+</script>
 
 </body>
 </html>

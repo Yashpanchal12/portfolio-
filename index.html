@@ -2,21 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Yash Panchal | Portfolio</title>
+<title>Yash Panchal | Portfolio & Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Yash Panchal - Data Analyst, Digital Marketer & Web Developer">
+<meta name="description" content="Yash Panchal – Data Analyst, Digital Marketer & Web Developer Portfolio & Blog">
+<meta name="keywords" content="Yash Panchal, Data Analyst, Power BI, Digital Marketing, Web Developer">
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<!-- Google Analytics (PASTE YOUR REAL ID) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-XXXXXXXXXX');
-</script>
 
 <style>
 body{
@@ -24,6 +16,7 @@ margin:0;
 font-family:Arial, sans-serif;
 background:#0b1220;
 color:#fff;
+scroll-behavior:smooth;
 }
 
 /* NAV */
@@ -66,6 +59,11 @@ color:#fff;
 font-size:16px;
 cursor:pointer;
 }
+.social a{
+font-size:24px;
+margin:0 10px;
+color:#c7d2fe;
+}
 
 /* SECTION */
 section{
@@ -94,17 +92,46 @@ border-radius:20px;
 background:linear-gradient(90deg,#6366f1,#22d3ee);
 }
 
-/* PROJECT */
-.project img{
-width:100%;
-border-radius:12px;
+/* PROJECTS */
+.project-card{
+background:#020617;
+padding:20px;
+border-radius:15px;
+margin-bottom:25px;
+border-left:4px solid #6366f1;
+}
+.project-card h3{color:#a5b4fc}
+
+/* BLOG */
+.blog-card{
+background:#020617;
+padding:20px;
+border-radius:15px;
+margin-bottom:25px;
+}
+.blog-card a{
+color:#22d3ee;
+text-decoration:none;
+font-weight:bold;
 }
 
-/* SOCIAL */
-.social a{
-font-size:24px;
-margin:0 10px;
-color:#c7d2fe;
+/* CONTACT */
+input, textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:none;
+border-radius:10px;
+outline:none;
+}
+button{
+padding:12px 25px;
+border:none;
+border-radius:25px;
+background:#6366f1;
+color:#fff;
+font-size:16px;
+cursor:pointer;
 }
 
 /* FOOTER */
@@ -132,20 +159,21 @@ z-index:999;
 
 <body>
 
+<!-- NAV -->
 <nav>
 <b>Yash Panchal</b>
 <div>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
-<a href="blog1.html">Blog</a>
+<a href="#blog">Blog</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-<img src="profile.jpg">
+<img src="profile.jpg" alt="Yash Panchal">
 <h1>Hi, I'm <span>Yash Panchal</span></h1>
 <p>Data Analytics | Digital Marketing | Web Developer</p>
 <button onclick="document.getElementById('contact').scrollIntoView()">Contact Me</button>
@@ -161,37 +189,62 @@ z-index:999;
 <section id="about" class="card">
 <h2>About Me</h2>
 <p>
-I am a passionate <b>Data Analyst</b> skilled in transforming raw data into powerful insights using
-<b>Power BI & Excel</b>. Along with analytics, I work in <b>Digital Marketing</b> focusing on SEO,
-growth strategies and performance optimization. I also build clean, fast and responsive
-<b>websites</b> using modern tools.
+I am a passionate <b>Data Analyst</b> skilled in <b>Power BI & Excel</b>.
+I also work in <b>Digital Marketing</b> (SEO & growth strategies)
+and develop fast, responsive <b>websites</b>.
 </p>
 </section>
 
 <!-- SKILLS -->
 <section id="skills" class="card">
 <h2>My Skills</h2>
-
 <p>Power BI</p>
 <div class="bar"><div class="fill" style="width:90%"></div></div>
-
 <p>Excel</p>
 <div class="bar"><div class="fill" style="width:85%"></div></div>
-
 <p>Data Analytics</p>
 <div class="bar"><div class="fill" style="width:88%"></div></div>
-
-<p>GitHub</p>
-<div class="bar"><div class="fill" style="width:75%"></div></div>
-
 <p>Web Development</p>
 <div class="bar"><div class="fill" style="width:80%"></div></div>
 </section>
 
-<!-- PROJECT -->
-<section id="projects" class="card project">
+<!-- PROJECTS -->
+<section id="projects" class="card">
 <h2>Projects</h2>
-<img src="powerbi-dashboard.jpg" alt="Power BI Dashboard">
+
+<div class="project-card">
+<h3>📊 Power BI Sales Dashboard</h3>
+<p>Interactive dashboard for sales trends & insights.</p>
+</div>
+
+<div class="project-card">
+<h3>📈 Digital Marketing Campaign</h3>
+<p>SEO & social media campaign for lead generation.</p>
+</div>
+
+<div class="project-card">
+<h3>💻 Portfolio Website</h3>
+<p>Personal responsive portfolio website.</p>
+</div>
+
+</section>
+
+<!-- BLOG -->
+<section id="blog" class="card">
+<h2>Blog</h2>
+
+<div class="blog-card">
+<h3>How Data Analytics Helps Business</h3>
+<p>Using data to make smarter business decisions.</p>
+<a href="#">Read More →</a>
+</div>
+
+<div class="blog-card">
+<h3>Power BI for Beginners</h3>
+<p>Step-by-step guide to dashboards.</p>
+<a href="#">Read More →</a>
+</div>
+
 </section>
 
 <!-- CONTACT -->
@@ -206,10 +259,9 @@ growth strategies and performance optimization. I also build clean, fast and res
 </section>
 
 <footer>
-© 2026 Yash Panchal | Portfolio
+© 2026 Yash Panchal | Portfolio & Blog
 </footer>
 
-<!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/919302707801" target="_blank">
 <i class="fab fa-whatsapp"></i>
 </a>

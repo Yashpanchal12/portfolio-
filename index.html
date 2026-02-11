@@ -2,272 +2,229 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Yash Panchal | Portfolio & Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Yash Panchal – Data Analyst, Digital Marketer & Web Developer Portfolio & Blog">
-<meta name="keywords" content="Yash Panchal, Data Analyst, Power BI, Digital Marketing, Web Developer">
+<title>Yash Panchal | Premium Portfolio</title>
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+
 body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#0b1220;
-color:#fff;
-scroll-behavior:smooth;
+  font-family:'Poppins',sans-serif;
+  background:#0f0f0f;
+  color:#fff;
 }
 
-/* NAV */
+#particles-js{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
 nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 30px;
-background:#020617;
-position:sticky;
-top:0;
-z-index:1000;
+  position:fixed;
+  width:100%;
+  padding:20px 10%;
+  display:flex;
+  justify-content:space-between;
+  background:rgba(0,0,0,0.8);
+  backdrop-filter:blur(10px);
+  z-index:1000;
 }
+
 nav a{
-color:#c7d2fe;
-margin-left:15px;
-text-decoration:none;
-font-weight:bold;
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
 }
+nav a:hover{color:#00f5ff;}
 
-/* HERO */
-.hero{
-text-align:center;
-padding:70px 20px;
-}
-.hero img{
-width:140px;
-height:140px;
-border-radius:50%;
-border:3px solid #6366f1;
-}
-.hero h1 span{color:#6366f1;}
-.hero button{
-margin-top:15px;
-padding:12px 25px;
-border:none;
-border-radius:25px;
-background:#6366f1;
-color:#fff;
-font-size:16px;
-cursor:pointer;
-}
-.social a{
-font-size:24px;
-margin:0 10px;
-color:#c7d2fe;
-}
-
-/* SECTION */
 section{
-max-width:1100px;
-margin:60px auto;
-padding:20px;
+  padding:120px 10%;
+  min-height:100vh;
 }
+
+.hero{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.profile-img{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  margin-top:20px;
+  border:3px solid #00f5ff;
+  object-fit:cover;
+}
+
+.hero h1{font-size:48px;}
+.hero h2{color:#00f5ff;margin-top:10px;}
+
+.btn{
+  margin-top:20px;
+  padding:12px 25px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(45deg,#00f5ff,#ff00c8);
+  color:white;
+  cursor:pointer;
+  text-decoration:none;
+  display:inline-block;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
 .card{
-background:#111827;
-padding:25px;
-border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,.4);
-margin-bottom:40px;
-}
-h2{color:#818cf8}
-
-/* SKILLS */
-.bar{
-background:#1f2937;
-border-radius:20px;
-margin-bottom:15px;
-}
-.fill{
-height:16px;
-border-radius:20px;
-background:linear-gradient(90deg,#6366f1,#22d3ee);
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  padding:30px;
+  border-radius:20px;
+  transition:0.4s;
 }
 
-/* PROJECTS */
-.project-card{
-background:#020617;
-padding:20px;
-border-radius:15px;
-margin-bottom:25px;
-border-left:4px solid #6366f1;
-}
-.project-card h3{color:#a5b4fc}
-
-/* BLOG */
-.blog-card{
-background:#020617;
-padding:20px;
-border-radius:15px;
-margin-bottom:25px;
-}
-.blog-card a{
-color:#22d3ee;
-text-decoration:none;
-font-weight:bold;
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
-/* CONTACT */
-input, textarea{
-width:100%;
-padding:12px;
-margin-bottom:15px;
-border:none;
-border-radius:10px;
-outline:none;
-}
-button{
-padding:12px 25px;
-border:none;
-border-radius:25px;
-background:#6366f1;
-color:#fff;
-font-size:16px;
-cursor:pointer;
+.social-icons{
+  position:fixed;
+  top:50%;
+  left:20px;
+  transform:translateY(-50%);
+  display:flex;
+  flex-direction:column;
+  gap:15px;
 }
 
-/* FOOTER */
+.social-icons a{
+  color:white;
+  font-size:22px;
+}
+.social-icons a:hover{
+  color:#00f5ff;
+  transform:scale(1.2);
+}
+
 footer{
-text-align:center;
-padding:20px;
-background:#020617;
-color:#94a3b8;
-}
-
-/* WHATSAPP */
-.whatsapp{
-position:fixed;
-right:20px;
-bottom:20px;
-background:#25D366;
-color:white;
-padding:15px;
-border-radius:50%;
-font-size:26px;
-z-index:999;
+  text-align:center;
+  padding:20px;
+  background:#111;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
+<div id="particles-js"></div>
+
 <nav>
-<b>Yash Panchal</b>
-<div>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#blog">Blog</a>
-<a href="#contact">Contact</a>
-</div>
+  <h3>Yash Panchal</h3>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
-<img src="profile.jpg" alt="Yash Panchal">
-<h1>Hi, I'm <span>Yash Panchal</span></h1>
-<p>Data Analytics | Digital Marketing | Web Developer</p>
-<button onclick="document.getElementById('contact').scrollIntoView()">Contact Me</button>
-
-<div class="social">
-<a href="https://www.instagram.com/yash.fxks" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="https://wa.me/919302707801" target="_blank"><i class="fab fa-whatsapp"></i></a>
-<a href="mailto:yourmail@gmail.com"><i class="fas fa-envelope"></i></a>
-</div>
+<div class="social-icons">
+  <a href="#"><i class="fab fa-linkedin"></i></a>
+  <a href="#"><i class="fab fa-github"></i></a>
+  <a href="#"><i class="fab fa-instagram"></i></a>
 </div>
 
-<!-- ABOUT -->
-<section id="about" class="card">
-<h2>About Me</h2>
-<p>
-I am a passionate <b>Data Analyst</b> skilled in <b>Power BI & Excel</b>.
-I also work in <b>Digital Marketing</b> (SEO & growth strategies)
-and develop fast, responsive <b>websites</b>.
-</p>
+<section class="hero" id="home">
+  <h1>Hi, I'm Yash Panchal</h1>
+  <img src="images/profile.jpg" class="profile-img">
+  <h2>I am <span id="typing"></span></h2>
+  <a href="#contact" class="btn">Hire Me</a>
 </section>
 
-<!-- SKILLS -->
-<section id="skills" class="card">
-<h2>My Skills</h2>
-<p>Power BI</p>
-<div class="bar"><div class="fill" style="width:90%"></div></div>
-<p>Excel</p>
-<div class="bar"><div class="fill" style="width:85%"></div></div>
-<p>Data Analytics</p>
-<div class="bar"><div class="fill" style="width:88%"></div></div>
-<p>Web Development</p>
-<div class="bar"><div class="fill" style="width:80%"></div></div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="card">
-<h2>Projects</h2>
-
-<div class="project-card">
-<h3>📊 Power BI Sales Dashboard</h3>
-<p>Interactive dashboard for sales trends & insights.</p>
-</div>
-
-<div class="project-card">
-<h3>📈 Digital Marketing Campaign</h3>
-<p>SEO & social media campaign for lead generation.</p>
-</div>
-
-<div class="project-card">
-<h3>💻 Portfolio Website</h3>
-<p>Personal responsive portfolio website.</p>
-</div>
-
-</section>
-
-
-<!-- BLOG -->
-<section id="blog" class="card">
-  <h2>Blog</h2>
-
-  <div class="blog-card">
-    <h3>How Data Analytics Helps Business</h3>
-    <p>Using data to make smarter business decisions.</p>
-    <a href="blog1.html">Read More →</a>
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>I am a passionate Data Analyst, Digital Marketer & Web Developer skilled in Power BI, Excel and website development.</p>
   </div>
+</section>
 
-  <div class="blog-card">
-    <h3>Power BI for Beginners</h3>
-    <p>Step-by-step guide to dashboards.</p>
-    <a href="blog2.html">Read More →</a>
+<section id="skills">
+  <h2>My Skills</h2>
+  <div class="grid">
+    <div class="card">Power BI</div>
+    <div class="card">Excel</div>
+    <div class="card">Data Analytics</div>
+    <div class="card">Digital Marketing</div>
+    <div class="card">Web Development</div>
   </div>
-
 </section>
 
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card">Power BI Sales Dashboard</div>
+    <div class="card">Digital Marketing Campaign</div>
+    <div class="card">Portfolio Website</div>
+  </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="card">
-<h2>Contact Me</h2>
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<textarea placeholder="Your Message"></textarea>
-<button type="submit">Send Message</button>
-</form>
+<section id="blog">
+  <h2>My Blog</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>How Data Analytics Helps Business</h3>
+      <p>Learn how analytics improves business growth.</p>
+      <a href="blog1.html" class="btn">Read More</a>
+    </div>
+    <div class="card">
+      <h3>Power BI for Beginners</h3>
+      <p>Step by step guide to start Power BI.</p>
+      <a href="blog2.html" class="btn">Read More</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div class="card">
+    <p>Email: your@email.com</p>
+  </div>
 </section>
 
 <footer>
-© 2026 Yash Panchal | Portfolio & Blog
+  © 2026 Yash Panchal | All Rights Reserved
 </footer>
 
-<a class="whatsapp" href="https://wa.me/919302707801" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
+<script>
+const texts=["Data Analyst","Digital Marketer","Web Developer"];
+let count=0,index=0,currentText="",letter="";
+(function type(){
+if(count===texts.length){count=0;}
+currentText=texts[count];
+letter=currentText.slice(0,++index);
+document.getElementById("typing").textContent=letter;
+if(letter.length===currentText.length){count++;index=0;}
+setTimeout(type,150);
+})();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script>
+particlesJS("particles-js",{particles:{number:{value:80},size:{value:3},move:{speed:2},line_linked:{enable:true},color:{value:"#00f5ff"}}});
+</script>
 
 </body>
 </html>

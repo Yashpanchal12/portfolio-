@@ -24,23 +24,56 @@ body{
   z-index:-1;
 }
 
-nav{
-  position:fixed;
-  width:100%;
-  padding:20px 10%;
-  display:flex;
-  justify-content:space-between;
-  background:rgba(0,0,0,0.8);
-  backdrop-filter:blur(10px);
-  z-index:1000;
+.hamburger{
+  display:none;
+  flex-direction:column;
+  cursor:pointer;
+  gap:6px;
 }
 
-nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:20px;
+.hamburger span{
+  width:25px;
+  height:3px;
+  background:white;
+  transition:0.4s;
 }
-nav a:hover{color:#00f5ff;}
+
+/* Animation when active */
+.hamburger.active span:nth-child(1){
+  transform:rotate(45deg) translate(5px,5px);
+}
+
+.hamburger.active span:nth-child(2){
+  opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+  transform:rotate(-45deg) translate(6px,-6px);
+}
+
+/* Mobile view */
+@media (max-width:768px){
+  .nav-links{
+    position:absolute;
+    top:70px;
+    right:0;
+    background:rgba(0,0,0,0.95);
+    flex-direction:column;
+    width:220px;
+    text-align:center;
+    display:none;
+    padding:20px 0;
+  }
+
+  .nav-links a{
+    display:block;
+    margin:15px 0;
+  }
+
+  .hamburger{
+    display:flex;
+  }
+}
 
 section{
   padding:120px 10%;
@@ -131,14 +164,20 @@ footer{
 
 <nav>
   <h3>Yash Panchal</h3>
-  <div>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
+  <nav>
+  <div class="logo">Yash Panchal</div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    ☰
   </div>
+  </nav>
 </nav>
 
 <div class="social-icons">
@@ -230,6 +269,7 @@ footer{
   © 2026 Yash Panchal | All Rights Reserved
 </footer>
 
+<!-- Typing Effect Script -->
 <script>
 const texts=["Data Analyst","Digital Marketer","Web Developer"];
 let count=0,index=0,currentText="",letter="";
@@ -243,9 +283,34 @@ setTimeout(type,150);
 })();
 </script>
 
+<!-- Particles Library -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
 <script>
-particlesJS("particles-js",{particles:{number:{value:80},size:{value:3},move:{speed:2},line_linked:{enable:true},color:{value:"#00f5ff"}}});
+particlesJS("particles-js",{
+particles:{
+number:{value:80},
+size:{value:3},
+move:{speed:2},
+line_linked:{enable:true},
+color:{value:"#00f5ff"}
+}});
+</script>
+
+<!-- Hamburger Script (LAST ME) -->
+<script>
+function toggleMenu(){
+  var nav = document.getElementById("navLinks");
+  var hamburger = document.getElementById("hamburger");
+
+  if(nav.style.display === "flex"){
+    nav.style.display = "none";
+    hamburger.classList.remove("active");
+  } else {
+    nav.style.display = "flex";
+    hamburger.classList.add("active");
+  }
+}
 </script>
 
 </body>

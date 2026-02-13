@@ -24,6 +24,34 @@ body{
   z-index:-1;
 }
 
+/* NAVBAR */
+nav{
+  position:fixed;
+  width:100%;
+  padding:20px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,0.8);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  transition:0.3s;
+}
+
+nav a:hover{color:#00f5ff;}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+}
+
+/* HAMBURGER */
 .hamburger{
   display:none;
   flex-direction:column;
@@ -38,7 +66,6 @@ body{
   transition:0.4s;
 }
 
-/* Animation when active */
 .hamburger.active span:nth-child(1){
   transform:rotate(45deg) translate(5px,5px);
 }
@@ -51,7 +78,11 @@ body{
   transform:rotate(-45deg) translate(6px,-6px);
 }
 
-/* Mobile view */
+.nav-links.show{
+  display:flex !important;
+}
+
+/* MOBILE */
 @media (max-width:768px){
   .nav-links{
     position:absolute;
@@ -112,12 +143,15 @@ section{
   display:inline-block;
 }
 
+/* GRID */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  margin-top:40px;
 }
 
+/* CARD */
 .card{
   background:rgba(255,255,255,0.05);
   backdrop-filter:blur(10px);
@@ -129,6 +163,29 @@ section{
 .card:hover{
   transform:translateY(-10px);
   box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* PROJECT IMAGE */
+.project-card{
+  overflow:hidden;
+  padding:0;
+}
+
+.project-card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  transition:0.4s;
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
+}
+
+.project-card:hover img{
+  transform:scale(1.1);
+}
+
+.project-content{
+  padding:20px;
 }
 
 .social-icons{
@@ -145,6 +202,7 @@ section{
   color:white;
   font-size:22px;
 }
+
 .social-icons a:hover{
   color:#00f5ff;
   transform:scale(1.2);
@@ -164,35 +222,20 @@ footer{
 
 <nav>
   <h3>Yash Panchal</h3>
-  <nav>
-  <div class="logo">Yash Panchal</div>
 
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#blog">Blog</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-
-  <div class="hamburger" onclick="toggleMenu()">
-    ☰
+  <div class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
   </div>
-  </nav>
+
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </nav>
-
-<div class="social-icons">
-  <a href="https://www.instagram.com/yash.fxks" target="_blank">
-    <i class="fab fa-instagram"></i>
-  </a>
-
-  <a href="mailto:yp099999@gmail.com">
-    <i class="fas fa-envelope"></i>
-  </a>
-
-  <a href="tel:+919302707801">
-    <i class="fas fa-phone"></i>
-  </a>
-</div>
 
 <section class="hero" id="home">
   <h1>Hi, I'm Yash Panchal</h1>
@@ -201,67 +244,32 @@ footer{
   <a href="#contact" class="btn">Hire Me</a>
 </section>
 
-<section id="about">
-  <h2>About Me</h2>
-  <div class="card">
-    <p>I am a passionate Data Analyst, Digital Marketer & Web Developer skilled in Power BI, Excel and website development.</p>
-  </div>
-</section>
-
-<section id="skills">
-  <h2>My Skills</h2>
-  <div class="grid">
-    <div class="card">Power BI</div>
-    <div class="card">Excel</div>
-    <div class="card">Data Analytics</div>
-    <div class="card">Digital Marketing</div>
-    <div class="card">Web Development</div>
-  </div>
-</section>
-
 <section id="projects">
   <h2>Projects</h2>
+
   <div class="grid">
-    <div class="card">Power BI Sales Dashboard</div>
-    <div class="card">Digital Marketing Campaign</div>
-    <div class="card">Portfolio Website</div>
-  </div>
-</section>
 
-<section id="blog">
-  <h2>My Blog</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>How Data Analytics Helps Business</h3>
-      <p>Learn how analytics improves business growth.</p>
-      <a href="blog1.html" class="btn">Read More</a>
+    <div class="card project-card">
+      <img src="imagepowerbi.png">
+      <div class="project-content">
+        <h3>Power BI Sales Dashboard</h3>
+      </div>
     </div>
-    <div class="card">
-      <h3>Power BI for Beginners</h3>
-      <p>Step by step guide to start Power BI.</p>
-      <a href="blog2.html" class="btn">Read More</a>
+
+    <div class="card project-card">
+      <img src="imageproject2.png">
+      <div class="project-content">
+        <h3>Excel Analytics</h3>
+      </div>
     </div>
-  </div>
-</section>
 
-<section id="contact">
-  <h2>Contact Me</h2>
-  <div class="card">
-    <p><strong>Email:</strong> 
-      <a href="mailto:yp099999@gmail.com">yp099999@gmail.com</a>
-    </p>
+    <div class="card project-card">
+      <img src="imageproject3.png">
+      <div class="project-content">
+        <h3>Data Analytics Dashboard</h3>
+      </div>
+    </div>
 
-    <p><strong>Phone:</strong> 
-      <a href="tel:+919302707801">+91 9302707801</a>
-    </p>
-
-    <p><strong>Instagram:</strong> 
-      <a href="https://www.instagram.com/yash.fxks" target="_blank">
-        @yash.fxks
-      </a>
-    </p>
-
-    <p><strong>Location:</strong> India</p>
   </div>
 </section>
 
@@ -269,8 +277,14 @@ footer{
   © 2026 Yash Panchal | All Rights Reserved
 </footer>
 
-<!-- Typing Effect Script -->
 <script>
+function toggleMenu(){
+  const nav=document.getElementById("navLinks");
+  const hamburger=document.getElementById("hamburger");
+  nav.classList.toggle("show");
+  hamburger.classList.toggle("active");
+}
+
 const texts=["Data Analyst","Digital Marketer","Web Developer"];
 let count=0,index=0,currentText="",letter="";
 (function type(){
@@ -283,34 +297,9 @@ setTimeout(type,150);
 })();
 </script>
 
-<!-- Particles Library -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-
 <script>
-particlesJS("particles-js",{
-particles:{
-number:{value:80},
-size:{value:3},
-move:{speed:2},
-line_linked:{enable:true},
-color:{value:"#00f5ff"}
-}});
-</script>
-
-<!-- Hamburger Script (LAST ME) -->
-<script>
-function toggleMenu(){
-  var nav = document.getElementById("navLinks");
-  var hamburger = document.getElementById("hamburger");
-
-  if(nav.style.display === "flex"){
-    nav.style.display = "none";
-    hamburger.classList.remove("active");
-  } else {
-    nav.style.display = "flex";
-    hamburger.classList.add("active");
-  }
-}
+particlesJS("particles-js",{particles:{number:{value:80},size:{value:3},move:{speed:2},line_linked:{enable:true},color:{value:"#00f5ff"}}});
 </script>
 
 </body>
